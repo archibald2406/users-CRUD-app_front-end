@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 500;
+}
+
+.toolbar img {
+  padding: 20px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.add-user-button {
+  border-radius: 20px;
+  border: 1px solid #eee;
+  font-size: 24px;
+  margin-right: 20px;
+  transition: box-shadow .3s linear;
+}
+
+.add-user-button:hover {
+  box-shadow: 0 0 3pt 3pt rgb(255, 255, 255);
+} 
+
+.users-number {
+  margin-right: 30px;
+}
+
+.content {
+  margin: 0 auto;
+  min-height: 100vh; 
+  background-color: rgb(206, 206, 206);
+}
+
+.users-list {
+  display: flex;
+  margin: 0 auto;
+  padding: 32px 16px;
+  max-width: 60%;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.user-card {
+  flex: 1 0 350px;
+  margin: 15px;
+  border-radius: 20px;
+  transition: box-shadow .3s linear;
+}
+
+.user-card:hover {
+  box-shadow: 0 0 3pt 5pt rgb(143, 142, 142);
+} 
+
+.user-header-image {
+  background-image: url('https://img.icons8.com/pastel-glyph/64/000000/person-male.png');
+  border: 1px solid #339797;
+  background-size: cover;
+}
+
+.mat-card-header .mat-card-title {
+  margin-top: 8px;
+  font-size: 24px;
+}
+
+mat-card-content {
+  margin: 0 auto;
+}
+
+mat-card-actions {
+  padding: 0;
+}
+
+ul {
+  font-size: 18px;
+  padding: 20px 30px;
+  list-style-type: circle;
+}
+
+mat-card-actions {
+  padding-left: 15px;
+}

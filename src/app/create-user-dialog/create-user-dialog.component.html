@@ -1,0 +1,57 @@
+<form #form="ngForm">
+  <h1 mat-dialog-title>Enter data about user:</h1>
+  <mat-form-field>
+    <input matInput
+           [(ngModel)]="user.name"
+           placeholder="Name"
+           name="name"
+           pattern="^[A-Z][a-z]*$"
+           required>
+    <mat-error>
+      Name is <strong>invalid</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput
+           [(ngModel)]="user.surname"
+           placeholder="Surname"
+           name="surname"
+           pattern="^[A-Z][a-z]*$"
+           required>
+    <mat-error>
+      Surname is <strong>invalid</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput
+           [(ngModel)]="user.phone"
+           placeholder="Phone in format: 80(29|33|44|25)-XXX-XX-XX"
+           name="phone"
+           required
+           pattern="^80\((29|33|44|25)\)-\d{3}-\d{2}-\d{2}$"
+           #phone>
+    <mat-error>
+      Phone is <strong>invalid</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input type="email"
+           matInput
+           [(ngModel)]="user.mail"
+           placeholder="E-mail"
+           name="mail"
+           required
+           email>
+    <mat-error>
+      Email is <strong>invalid</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-dialog-actions>
+    <button mat-button [disabled]="!form.valid" [mat-dialog-close]="user">
+      Save
+    </button>
+    <button mat-button mat-dialog-close>
+      Cancel
+    </button>
+  </mat-dialog-actions>
+</form>
